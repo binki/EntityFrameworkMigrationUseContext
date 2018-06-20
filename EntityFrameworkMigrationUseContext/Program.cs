@@ -40,6 +40,13 @@ namespace EntityFrameworkMigrationUseContext
                         connectionString = newString == "" ? null : newString;
                     }
                 },
+                {
+                    "workaround-initializer",
+                    context =>
+                    {
+                        context.WorkaroundInitializer();
+                    }
+                },
             };
             while (true)
             {

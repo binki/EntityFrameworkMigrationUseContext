@@ -23,5 +23,10 @@ namespace EntityFrameworkMigrationUseContext
                  connectionString)
         {
         }
+
+        public void WorkaroundInitializer()
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ProgramContext, Configuration>(true));
+        }
     }
 }
